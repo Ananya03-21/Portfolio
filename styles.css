@@ -149,6 +149,20 @@ img {
   border-radius: 999px;
   transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   display: inline-block;
+  margin: 0;
+  cursor: pointer;
+}
+
+button.btn {
+  font: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.js-copy-email.is-copied {
+  background: var(--moss);
+  border-color: var(--moss);
+  color: var(--beige);
 }
 
 .btn:hover {
