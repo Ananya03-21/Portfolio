@@ -365,7 +365,7 @@ button.btn {
 }
 
 .card-highlight {
-  background: var(--midnight);
+  background: var(--dark-green);
   color: var(--beige);
 }
 
