@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -328,6 +329,7 @@ button.btn {
 }
 
 .card {
+  min-width: 0;
   background: var(--beige);
   border-radius: var(--radius);
   padding: 40px;
@@ -442,6 +444,7 @@ button.btn {
 
 .gallery-item {
   position: relative;
+  min-width: 0;
   background: rgba(16, 86, 102, 0.06);
   border-radius: var(--radius);
   overflow: hidden;
