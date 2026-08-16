@@ -288,14 +288,6 @@ img {
   color: var(--ink);
 }
 
-.card-why {
-  margin-top: 18px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-style: italic;
-  font-size: 14px;
-  color: var(--midnight);
-}
-
 .card-note {
   margin-top: 14px;
   font-size: 15px;
