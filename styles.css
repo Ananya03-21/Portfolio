@@ -101,11 +101,12 @@ img {
   align-items: center;
   color: var(--dark-green);
   opacity: 0.85;
-  transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease, color 0.15s ease;
 }
 
 .nav-home:hover {
   opacity: 1;
+  color: var(--rosy);
 }
 
 .nav-links {
@@ -118,11 +119,12 @@ img {
 
 .nav-links a {
   opacity: 0.75;
-  transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease, color 0.15s ease;
 }
 
 .nav-links a:hover {
   opacity: 1;
+  color: var(--rosy);
 }
 
 /* ---------- Buttons ---------- */
@@ -192,6 +194,12 @@ img {
   color: var(--midnight);
   border-bottom: 1.5px solid var(--midnight);
   padding-bottom: 2px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.text-link:hover {
+  color: var(--rosy);
+  border-bottom-color: var(--rosy);
 }
 
 /* ---------- Hero ---------- */
@@ -287,6 +295,11 @@ img {
   border-bottom-color: var(--moss);
   margin-top: 18px;
   display: inline-block;
+}
+
+.card-highlight .text-link:hover {
+  color: var(--rosy);
+  border-bottom-color: var(--rosy);
 }
 
 .uniprism-layout {
@@ -496,6 +509,12 @@ img {
 .essay-figure figcaption a {
   color: var(--midnight);
   border-bottom: 1px solid var(--midnight);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.essay-figure figcaption a:hover {
+  color: var(--rosy);
+  border-bottom-color: var(--rosy);
 }
 
 .essay-figure-small {
