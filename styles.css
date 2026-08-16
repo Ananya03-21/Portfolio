@@ -104,7 +104,8 @@ img {
   transition: opacity 0.15s ease, color 0.15s ease;
 }
 
-.nav-home:hover {
+.nav-home:hover,
+.nav-home:active {
   opacity: 1;
   color: var(--rosy);
 }
@@ -122,7 +123,8 @@ img {
   transition: opacity 0.15s ease, color 0.15s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:active {
   opacity: 1;
   color: var(--rosy);
 }
@@ -197,7 +199,8 @@ img {
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.text-link:hover {
+.text-link:hover,
+.text-link:active {
   color: var(--rosy);
   border-bottom-color: var(--rosy);
 }
@@ -217,7 +220,7 @@ img {
   font-family: 'Fraunces', 'Georgia', serif;
   font-weight: 600;
   font-size: clamp(40px, 6vw, 68px);
-  color: var(--moss);
+  color: var(--midnight);
 }
 
 /* ---------- The Thread ---------- */
@@ -281,12 +284,12 @@ img {
 }
 
 .card-highlight {
-  background: var(--dark-green);
+  background: var(--midnight);
   color: var(--beige);
 }
 
 .card-highlight .card-label {
-  color: var(--moss);
+  color: var(--rosy);
 }
 
 .card-highlight p {
@@ -300,17 +303,10 @@ img {
   display: inline-block;
 }
 
-.card-highlight .text-link:hover {
+.card-highlight .text-link:hover,
+.card-highlight .text-link:active {
   color: var(--rosy);
   border-bottom-color: var(--rosy);
-}
-
-.card-teal {
-  background: var(--midnight);
-}
-
-.card-teal .card-label {
-  color: var(--rosy);
 }
 
 .uniprism-layout {
@@ -550,7 +546,8 @@ img {
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.essay-figure figcaption a:hover {
+.essay-figure figcaption a:hover,
+.essay-figure figcaption a:active {
   color: var(--rosy);
   border-bottom-color: var(--rosy);
 }
