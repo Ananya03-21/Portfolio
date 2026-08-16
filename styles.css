@@ -159,12 +159,12 @@ img {
 }
 
 .btn-outline {
-  border: 1.5px solid var(--dark-green);
-  color: var(--dark-green);
+  border: 1.5px solid var(--midnight);
+  color: var(--midnight);
 }
 
 .btn-outline:hover {
-  background: var(--dark-green);
+  background: var(--midnight);
   color: var(--beige);
 }
 
@@ -305,6 +305,14 @@ img {
   border-bottom-color: var(--rosy);
 }
 
+.card-teal {
+  background: var(--midnight);
+}
+
+.card-teal .card-label {
+  color: var(--rosy);
+}
+
 .uniprism-layout {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -412,7 +420,7 @@ img {
 /* ---------- Skills ---------- */
 .skills {
   padding: 72px 0;
-  background: rgba(131, 153, 88, 0.12);
+  background: rgba(16, 86, 102, 0.1);
 }
 
 .skills-grid {
@@ -448,6 +456,33 @@ img {
 .tag:hover {
   background: var(--moss);
   color: var(--beige);
+}
+
+.skill-research .tag {
+  border-color: var(--midnight);
+}
+
+.skill-research .tag:hover {
+  background: var(--midnight);
+  color: var(--beige);
+}
+
+.skill-analytics .tag {
+  border-color: var(--dark-green);
+}
+
+.skill-analytics .tag:hover {
+  background: var(--dark-green);
+  color: var(--beige);
+}
+
+.skill-creative .tag {
+  border-color: var(--rosy);
+}
+
+.skill-creative .tag:hover {
+  background: var(--rosy);
+  color: var(--dark-green);
 }
 
 /* ---------- Essay / Writing pages ---------- */
