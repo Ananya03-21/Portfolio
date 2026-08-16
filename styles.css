@@ -214,6 +214,8 @@ img {
 }
 
 .hero-inner h1 {
+  font-family: 'Fraunces', 'Georgia', serif;
+  font-weight: 600;
   font-size: clamp(40px, 6vw, 68px);
   color: var(--moss);
 }
