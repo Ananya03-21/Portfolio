@@ -68,7 +68,7 @@ img {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--midnight);
-  margin-bottom: 18px;
+  margin-bottom: 28px;
 }
 
 .section-title {
@@ -96,11 +96,16 @@ img {
   justify-content: space-between;
 }
 
-.nav-name {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: -0.01em;
+.nav-home {
+  display: inline-flex;
+  align-items: center;
+  color: var(--dark-green);
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+
+.nav-home:hover {
+  opacity: 1;
 }
 
 .nav-links {
@@ -195,43 +200,13 @@ img {
 }
 
 .hero-inner {
-  max-width: 1160px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 0 32px;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 64px;
-  align-items: center;
 }
 
-.hero-text,
-.hero-art {
-  min-width: 0;
-}
-
-.hero-text h1 {
+.hero-inner h1 {
   font-size: clamp(40px, 6vw, 68px);
-  margin-bottom: 24px;
-}
-
-.hero-subline {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 19px;
-  color: var(--midnight);
-  max-width: 460px;
-}
-
-.hero-art {
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--dark-green);
-  aspect-ratio: 3 / 4;
-}
-
-.hero-art img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* ---------- The Thread ---------- */
@@ -367,6 +342,7 @@ img {
 }
 
 .gallery-item {
+  position: relative;
   background: rgba(16, 86, 102, 0.06);
   border-radius: var(--radius);
   overflow: hidden;
@@ -378,15 +354,33 @@ img {
   object-fit: cover;
 }
 
-.gallery-item figcaption {
+.art-ref {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
-  padding: 16px 20px 20px;
-  color: var(--ink);
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(247, 244, 213, 0.9);
+  background: rgba(10, 51, 35, 0.55);
+  padding: 4px 10px;
+  border-radius: 999px;
+  backdrop-filter: blur(2px);
 }
 
-.gallery-item figcaption strong {
+.gallery-subhead {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--midnight);
+  margin: 48px 0 20px;
+}
+
+.gallery-graphite {
+  display: block;
+  max-width: 480px;
 }
 
 .gallery-pair .pair-images {
@@ -401,14 +395,14 @@ img {
 
 /* ---------- Skills ---------- */
 .skills {
-  padding: 96px 0;
+  padding: 72px 0;
   background: rgba(131, 153, 88, 0.12);
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 44px 56px;
+  gap: 32px 48px;
 }
 
 .skill-group h3 {
@@ -510,59 +504,16 @@ img {
   margin-right: auto;
 }
 
-.essay-footer-note {
-  margin-top: 56px;
-  padding-top: 28px;
-  border-top: 1.5px solid rgba(10, 51, 35, 0.15);
-  font-size: 15px;
-}
-
-.essay-sources {
-  margin-top: 32px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-.essay-sources-label {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--midnight);
-  margin-bottom: 12px;
-}
-
-.essay-sources ul {
-  list-style: none;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--ink);
-}
-
-.essay-sources a {
-  color: var(--midnight);
-  border-bottom: 1px solid var(--midnight);
-}
-
 /* ---------- Close ---------- */
 .close {
   background: var(--dark-green);
   color: var(--beige);
-  padding: 110px 0 64px;
+  padding: 72px 0 64px;
   text-align: center;
-}
-
-.close-line {
-  font-size: clamp(24px, 3.6vw, 36px);
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 500;
-  max-width: 620px;
-  margin: 0 auto;
-  line-height: 1.35;
 }
 
 .close .cta-row {
   justify-content: center;
-  margin-top: 40px;
 }
 
 .footer-name {
@@ -576,15 +527,6 @@ img {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-art {
-    order: -1;
-    aspect-ratio: 16 / 10;
-  }
-
   .card-grid {
     grid-template-columns: 1fr;
   }
