@@ -365,12 +365,12 @@ button.btn {
 }
 
 .card-highlight {
-  background: #9CAF88;
+  background: #DCE7CB;
   color: var(--dark-green);
 }
 
 .card-highlight .card-label {
-  color: #6B322C;
+  color: var(--rosy);
 }
 
 .card-highlight p {
