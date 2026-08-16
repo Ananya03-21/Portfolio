@@ -365,8 +365,8 @@ button.btn {
 }
 
 .card-highlight {
-  background: var(--dark-green);
-  color: var(--beige);
+  background: var(--moss);
+  color: var(--dark-green);
 }
 
 .card-highlight .card-label {
@@ -374,12 +374,12 @@ button.btn {
 }
 
 .card-highlight p {
-  color: rgba(247, 244, 213, 0.88);
+  color: var(--dark-green);
 }
 
 .card-highlight .text-link {
-  color: var(--beige);
-  border-bottom-color: var(--moss);
+  color: var(--dark-green);
+  border-bottom-color: var(--dark-green);
   margin-top: 18px;
   display: inline-block;
 }
