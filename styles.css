@@ -32,7 +32,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.01em;
@@ -64,7 +64,7 @@ img {
 }
 
 .eyebrow {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -118,10 +118,25 @@ img {
   color: var(--beige);
 }
 
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  color: var(--dark-green);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .nav-links {
   display: flex;
   gap: 6px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 14px;
   font-weight: 500;
 }
@@ -150,7 +165,7 @@ img {
 }
 
 .btn {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 14px;
   font-weight: 600;
   padding: 14px 26px;
@@ -186,7 +201,7 @@ button.btn {
   transform: translateX(-50%) translateY(4px);
   background: var(--dark-green);
   color: var(--beige);
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 12px;
   font-weight: 600;
   padding: 6px 12px;
@@ -212,13 +227,13 @@ button.btn {
 }
 
 .btn-primary {
-  background: var(--rosy);
+  border: 1.5px solid var(--rosy);
   color: var(--dark-green);
 }
 
 .btn-primary:hover {
-  background: var(--dark-green);
-  color: var(--beige);
+  background: var(--rosy);
+  color: var(--dark-green);
 }
 
 .btn-outline {
@@ -232,12 +247,13 @@ button.btn {
 }
 
 .btn-primary-dark {
-  background: var(--rosy);
-  color: var(--dark-green);
+  border: 1.5px solid var(--rosy);
+  color: var(--rosy);
 }
 
 .btn-primary-dark:hover {
-  background: var(--beige);
+  background: var(--rosy);
+  color: var(--dark-green);
 }
 
 .btn-outline-dark {
@@ -251,7 +267,7 @@ button.btn {
 }
 
 .text-link {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-weight: 600;
   font-size: 14px;
   color: var(--midnight);
@@ -310,7 +326,7 @@ footer[id] {
 }
 
 .hero-subline {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 16px;
   color: var(--midnight);
   margin-top: 16px;
@@ -353,7 +369,7 @@ footer[id] {
 }
 
 .card-label {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -412,10 +428,14 @@ footer[id] {
 }
 
 .uniprism-logo {
-  padding: 28px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.uniprism-logo img {
+  max-width: 200px;
 }
 
 .saving-layout {
@@ -472,7 +492,7 @@ footer[id] {
   position: absolute;
   left: 16px;
   bottom: 16px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 11px;
   font-weight: 500;
   color: rgba(247, 244, 213, 0.9);
@@ -483,7 +503,7 @@ footer[id] {
 }
 
 .gallery-subhead {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -535,7 +555,7 @@ footer[id] {
 .skill-list li {
   position: relative;
   padding-left: 24px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 15px;
   color: var(--ink);
 }
@@ -565,7 +585,7 @@ footer[id] {
 }
 
 .essay-dek {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 19px;
   color: var(--midnight);
   max-width: 560px;
@@ -601,7 +621,7 @@ footer[id] {
 }
 
 .essay-figure figcaption {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 13px;
   line-height: 1.6;
   color: var(--midnight);
@@ -640,7 +660,7 @@ footer[id] {
 
 .footer-name {
   margin-top: 90px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -682,8 +702,29 @@ footer[id] {
     grid-template-columns: 1fr;
   }
 
+  .nav-toggle {
+    display: inline-flex;
+  }
+
   .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 2px;
+    background: rgba(211, 150, 140, 0.97);
+    padding: 10px 20px 20px;
+    border-bottom: 1px solid rgba(10, 51, 35, 0.08);
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px 14px;
   }
 }
 
