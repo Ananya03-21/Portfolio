@@ -143,6 +143,14 @@
               </div>
               <div class="flip-card-back">
                 <video src="assets/art/skull-and-roses.mp4" controls playsinline></video>
+                <button type="button" class="expand-btn" aria-label="View video full screen">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+                    <path d="M16 3h3a2 2 0 0 1 2 2v3"></path>
+                    <path d="M21 16v3a2 2 0 0 1-2 2h-3"></path>
+                    <path d="M8 21H5a2 2 0 0 1-2-2v-3"></path>
+                  </svg>
+                </button>
                 <button type="button" class="flip-back-btn" aria-label="Back to image">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
                     <path d="M19 12H5"></path>
@@ -261,6 +269,7 @@
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
     <img src="" alt="" class="lightbox-img">
+    <video class="lightbox-video" controls playsinline></video>
   </div>
 
   <script src="script.js"></script>
