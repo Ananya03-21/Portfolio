@@ -705,6 +705,39 @@ footer[id] {
   font-style: italic;
 }
 
+.essay-formula {
+  font-size: 19px;
+  text-align: center;
+  font-style: italic;
+  color: var(--dark-green);
+  margin: 8px 0 30px;
+}
+
+.references {
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
+}
+
+.reference-entry {
+  font-size: 15px;
+  line-height: 1.7;
+  padding-left: 28px;
+  text-indent: -28px;
+  margin-bottom: 18px;
+  color: var(--ink);
+}
+
+.reference-entry a {
+  color: var(--midnight);
+  border-bottom: 1px solid var(--midnight);
+  word-break: break-word;
+}
+
+.reference-entry a:hover,
+.reference-entry a:active {
+  color: var(--rosy);
+  border-bottom-color: var(--rosy);
+}
+
 .essay-figure {
   margin: 36px 0;
 }
