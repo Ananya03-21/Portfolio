@@ -63,6 +63,11 @@ img {
   max-width: 760px;
 }
 
+.essay-hero .section-inner.narrow,
+.essay-body .section-inner.narrow {
+  max-width: 900px;
+}
+
 .eyebrow {
   font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
   font-size: 12px;
@@ -695,9 +700,13 @@ footer[id] {
   color: var(--dark-green);
 }
 
+.essay-body h2:first-of-type {
+  margin-top: 0;
+}
+
 .essay-body p {
   font-size: 18px;
-  line-height: 1.75;
+  line-height: 2;
   margin-bottom: 22px;
 }
 
@@ -718,11 +727,9 @@ footer[id] {
 }
 
 .reference-entry {
-  font-size: 15px;
-  line-height: 1.7;
-  padding-left: 28px;
-  text-indent: -28px;
-  margin-bottom: 18px;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 16px;
   color: var(--ink);
 }
 
