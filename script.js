@@ -80,7 +80,7 @@ if (lightbox) {
   var openLightboxVideo = function (src) {
     lightboxImg.style.display = 'none';
     lightboxImg.src = '';
-    lightboxVideo.style.display = '';
+    lightboxVideo.style.display = 'block';
     lightboxVideo.src = src;
     lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');
