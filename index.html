@@ -131,8 +131,26 @@
         <p class="eyebrow">03 / Creative Work</p>
 
         <div class="gallery">
-          <figure class="gallery-item">
-            <img src="assets/art/skull-and-roses.jpg" alt="Digital illustration of a skull with roses">
+          <figure class="gallery-item flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/art/skull-and-roses.jpg" alt="Digital illustration of a skull with roses">
+                <button type="button" class="play-btn" aria-label="Play video">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="flip-card-back">
+                <video src="assets/art/skull-and-roses.mp4" controls playsinline></video>
+                <button type="button" class="flip-back-btn" aria-label="Back to image">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M19 12H5"></path>
+                    <path d="M11 6l-6 6 6 6"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </figure>
 
           <figure class="gallery-item">
@@ -239,6 +257,11 @@
       <p class="footer-name">Ananya Deshmukh</p>
     </div>
   </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="" class="lightbox-img">
+  </div>
 
   <script src="script.js"></script>
 </body>
