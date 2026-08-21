@@ -504,6 +504,10 @@ footer[id] {
   border-radius: 6px;
 }
 
+.figure-box-full {
+  margin-top: 6px;
+}
+
 /* ---------- Creative gallery ---------- */
 .creative {
   padding: 96px 0;
