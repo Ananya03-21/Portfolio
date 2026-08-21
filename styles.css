@@ -435,6 +435,32 @@ footer[id] {
   border-bottom-color: var(--rosy);
 }
 
+.card-essay {
+  background: #E2BBB4;
+  color: var(--dark-green);
+}
+
+.card-essay .card-label {
+  color: var(--midnight);
+}
+
+.card-essay p {
+  color: var(--dark-green);
+}
+
+.card-essay .text-link {
+  color: var(--dark-green);
+  border-bottom-color: var(--dark-green);
+  margin-top: 18px;
+  display: inline-block;
+}
+
+.card-essay .text-link:hover,
+.card-essay .text-link:active {
+  color: var(--midnight);
+  border-bottom-color: var(--midnight);
+}
+
 .uniprism-layout {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
