@@ -436,7 +436,7 @@ footer[id] {
 }
 
 .card-essay {
-  background: #E2BBB4;
+  background: var(--rosy);
   color: var(--dark-green);
 }
 
@@ -530,7 +530,8 @@ footer[id] {
 }
 
 @media (min-width: 861px) {
-  .gallery-item img {
+  .gallery-item img,
+  .figure-box img {
     cursor: zoom-in;
   }
 }

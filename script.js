@@ -98,7 +98,7 @@ if (lightbox) {
     document.body.style.overflow = '';
   };
 
-  document.querySelectorAll('.gallery-item img').forEach(function (img) {
+  document.querySelectorAll('.gallery-item img, .figure-box img').forEach(function (img) {
     img.addEventListener('click', function () {
       if (!lightboxEnabled()) return;
       openLightboxImage(img.currentSrc || img.src, img.alt);
