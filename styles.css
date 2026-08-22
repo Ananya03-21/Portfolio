@@ -28,6 +28,10 @@
   --marker-num-size: 44px;
   --marker-num-color: var(--rosy);
   --marker-num-weight: 700;
+
+  /* Height of the fixed nav bar. Panels reserve this much top padding
+     so their first line never sits underneath the nav. */
+  --nav-h: 90px;
 }
 
 html {
@@ -85,7 +89,7 @@ img {
 /* Section marker: a styled number badge + label, used instead of a
    plain "01 / About" text eyebrow. Tune the look via the
    --marker-num-* custom properties in :root, or override per-section
-   below (e.g. .skills .section-num). */
+   below (e.g. .creative .section-num). */
 .section-marker {
   display: flex;
   align-items: baseline;
@@ -100,6 +104,12 @@ img {
   line-height: 1;
   color: transparent;
   -webkit-text-stroke: 1.5px var(--marker-num-color);
+}
+
+/* Per-section override: the default rosy numeral is too low-contrast
+   on the Essays panel's pink ground. */
+.essays .section-num {
+  -webkit-text-stroke-color: var(--midnight);
 }
 
 .section-label {
@@ -392,6 +402,7 @@ footer[id] {
   font-size: clamp(19px, 2.4vw, 26px);
   line-height: 1.55;
   color: var(--ink);
+  max-width: 900px;
 }
 
 /* ---------- Cards / Work ---------- */
@@ -703,72 +714,47 @@ footer[id] {
   aspect-ratio: 4 / 5;
 }
 
-/* ---------- Skills ---------- */
-.skills {
-  padding: var(--space-lg) 0;
-  background: #E1EAD1;
+/* ---------- Skills (inside the About panel) ---------- */
+.skills-block {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-sm);
+  border-top: 1.5px solid rgba(16, 86, 102, 0.2);
+}
+
+.skills-heading {
+  font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--midnight);
+  margin-bottom: var(--space-sm);
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md) var(--space-sm);
+  gap: var(--space-sm) var(--space-md);
 }
 
 .skill-group h3 {
-  font-size: 15px;
-  margin-bottom: var(--space-xs);
+  font-size: 14px;
+  margin-bottom: var(--space-2xs);
   color: var(--midnight);
 }
 
-.tags {
+.skill-list {
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3xs) var(--space-2xs);
+  flex-direction: column;
+  gap: 3px;
 }
 
-.tag {
+.skill-list li {
   font-family: 'Helvetica Neue', 'Times New Roman', sans-serif;
-  font-size: 12.5px;
-  font-weight: 600;
-  padding: 7px 13px;
-  border-radius: 999px;
-  background: var(--beige);
-  border: 1.5px solid var(--moss);
-  color: var(--dark-green);
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-.tag:hover {
-  background: var(--moss);
-  color: var(--beige);
-}
-
-.skill-research .tag {
-  border-color: var(--midnight);
-}
-
-.skill-research .tag:hover {
-  background: var(--midnight);
-  color: var(--beige);
-}
-
-.skill-analytics .tag {
-  border-color: var(--dark-green);
-}
-
-.skill-analytics .tag:hover {
-  background: var(--dark-green);
-  color: var(--beige);
-}
-
-.skill-creative .tag {
-  border-color: var(--rosy);
-}
-
-.skill-creative .tag:hover {
-  background: var(--rosy);
-  color: var(--dark-green);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink);
 }
 
 /* ---------- Essay / Writing pages ---------- */
@@ -971,41 +957,27 @@ body.panels-active {
   padding-top: 0;
 }
 
+/* Panels grow to fit their content (min-height, NOT height) and never
+   scroll internally — the page itself is the only scroll context, so
+   the wheel behaves normally everywhere and nothing gets clipped.
+   Content is top-aligned so a panel taller than the viewport can't
+   push its own first line above scroll position 0 where it would be
+   unreachable. z-index is assigned by index in scroll-effects.js, so
+   adding or removing a panel doesn't break the stacking order. */
 body.panels-active .panel {
-  height: 100vh;
-  height: 100dvh;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-top: 90px;
+  justify-content: flex-start;
+  padding-top: var(--nav-h);
+  padding-bottom: var(--space-lg);
   border-radius: 32px 32px 0 0;
   box-shadow: 0 -18px 50px rgba(10, 51, 35, 0.2);
 }
 
-body.panels-active .panel::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
-body.panels-active .panel:nth-of-type(1) { z-index: 1; }
-body.panels-active .panel:nth-of-type(2) { z-index: 2; }
-body.panels-active .panel:nth-of-type(3) { z-index: 3; }
-body.panels-active .panel:nth-of-type(4) { z-index: 4; }
-body.panels-active .panel:nth-of-type(5) { z-index: 5; }
-body.panels-active .panel:nth-of-type(6) { z-index: 6; }
-body.panels-active .panel:nth-of-type(7) { z-index: 7; }
-
-@media (prefers-reduced-motion: reduce) {
-  body.panels-active .panel {
-    height: auto;
-    overflow: visible;
-    box-shadow: none;
-    border-radius: 0;
-    padding-top: 0;
-  }
+/* The hero is always short enough to fit, so it can stay centred. */
+body.panels-active .panel.hero {
+  justify-content: center;
 }
 
 /* ---------- Responsive ---------- */
@@ -1045,8 +1017,10 @@ body.panels-active .panel:nth-of-type(7) { z-index: 7; }
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Compact lists stay two-up on phones — one column would make the
+     About panel needlessly tall. */
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .nav-toggle {
