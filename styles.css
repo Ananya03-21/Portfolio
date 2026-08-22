@@ -330,7 +330,7 @@ footer[id] {
 
 .hero-art img {
   width: 100%;
-  max-width: 340px;
+  max-width: 560px;
 }
 
 .hero-inner h1 {
@@ -894,7 +894,7 @@ footer[id] {
   }
 
   .hero-art img {
-    max-width: 240px;
+    max-width: 340px;
   }
 
   .card-grid {
